@@ -1,65 +1,149 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const calculators = [
+  {
+    name: "Asphalt Calculator",
+    slug: "asphalt-calculator",
+    description: "Calculate tons of asphalt needed for driveways and parking lots",
+  },
+  {
+    name: "Brick Calculator",
+    slug: "brick-calculator",
+    description: "Estimate number of bricks required for walls and construction projects",
+  },
+  {
+    name: "Bulk Material Calculator",
+    slug: "bulk-material-calculator",
+    description: "Calculate cubic yards for bulk construction and landscaping materials",
+  },
+  {
+    name: "Chain Link Fence Calculator",
+    slug: "chain-link-fence-calculator",
+    description: "Estimate chain link fencing materials and posts needed",
+  },
+  {
+    name: "Concrete Cost Calculator",
+    slug: "concrete-cost-calculator",
+    description: "Estimate total concrete costs based on project dimensions",
+  },
+  {
+    name: "Concrete Driveway Calculator",
+    slug: "concrete-driveway-calculator",
+    description: "Calculate concrete needed for driveway projects",
+  },
+  {
+    name: "Concrete Steps Calculator",
+    slug: "concrete-steps-calculator",
+    description: "Estimate concrete required for steps and stairs",
+  },
+  {
+    name: "Construction Cost Calculator",
+    slug: "construction-cost-calculator",
+    description: "Estimate total construction project material costs",
+  },
+  {
+    name: "Crushed Stone Calculator",
+    slug: "crushed-stone-calculator",
+    description: "Calculate crushed stone needed for driveways and base layers",
+  },
+  {
+    name: "Dirt Calculator",
+    slug: "dirt-calculator",
+    description: "Calculate fill dirt or topsoil needed for landscaping",
+  },
+  {
+    name: "Drywall Calculator",
+    slug: "drywall-calculator",
+    description: "Estimate drywall sheets needed for walls and ceilings",
+  },
+  {
+    name: "Fence Post Calculator",
+    slug: "fence-post-calculator",
+    description: "Calculate number of fence posts required for your project",
+  },
+  {
+    name: "French Drain Calculator",
+    slug: "french-drain-calculator",
+    description: "Estimate materials needed for drainage systems",
+  },
+  {
+    name: "Gravel Cost Calculator",
+    slug: "gravel-cost-calculator",
+    description: "Calculate gravel costs based on project requirements",
+  },
+  {
+    name: "Insulation Calculator",
+    slug: "insulation-calculator",
+    description: "Estimate insulation materials needed for walls and attics",
+  },
+  {
+    name: "Landscaping Calculator",
+    slug: "landscaping-calculator",
+    description: "Calculate materials for landscaping and garden projects",
+  },
+  {
+    name: "Material Cost Estimator",
+    slug: "material-cost-estimator",
+    description: "Estimate total material costs for construction projects",
+  },
+  {
+    name: "Paver Calculator",
+    slug: "paver-calculator",
+    description: "Calculate number of pavers needed for patios and walkways",
+  },
+  {
+    name: "Pea Gravel Calculator",
+    slug: "pea-gravel-calculator",
+    description: "Estimate pea gravel required for landscaping",
+  },
+  {
+    name: "Sand Calculator",
+    slug: "sand-calculator",
+    description: "Calculate sand needed for construction and landscaping",
+  },
+  {
+    name: "Sod Calculator",
+    slug: "sod-calculator",
+    description: "Estimate sod required for lawn installation",
+  },
+  {
+    name: "Stucco Calculator",
+    slug: "stucco-calculator",
+    description: "Calculate stucco materials needed for exterior finishes",
+  },
+  {
+    name: "Wood Fence Calculator",
+    slug: "wood-fence-calculator",
+    description: "Estimate wood fencing materials and posts required",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mb-12">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">
+          Free Construction Material Calculators
+        </h1>
+        <p className="text-lg text-gray-600">
+          Calculate asphalt, concrete, gravel, sand, and more for your projects.
+        </p>
+      </div>
+
+      <div className="space-y-6">
+        {calculators.map((calculator) => (
+          <Link
+            key={calculator.slug}
+            href={`/${calculator.slug}`}
+            className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors group"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <h2 className="text-2xl font-bold mb-2 group-hover:text-gray-600 transition-colors">
+              {calculator.name}
+            </h2>
+            <p className="text-gray-600">{calculator.description}</p>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
