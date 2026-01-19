@@ -51,11 +51,23 @@ export default function ChainLinkFenceCalculator() {
   const faqs = [
     {
       question: 'How far apart should chain link fence posts be?',
-      answer: 'Standard spacing is 10 feet on center. For taller fences or high-wind areas, use 8-foot spacing.',
+      answer: 'Standard spacing is 10 feet on center for residential fences. For taller fences (over 6 feet) or high-wind areas, use 8-foot spacing for added strength and stability.',
     },
     {
       question: 'What size posts do I need?',
-      answer: 'Use 2-3/8" line posts and 2-7/8" terminal (corner/end/gate) posts for residential fences up to 6 feet.',
+      answer: 'Use 2-3/8" line posts and 2-7/8" terminal (corner/end/gate) posts for residential fences up to 6 feet. For commercial or taller fences, use 2-1/2" line posts and 3" terminal posts.',
+    },
+    {
+      question: 'How much does chain link fence cost?',
+      answer: 'Chain link fence costs $8-$15 per linear foot installed. Materials only run $3-$8 per foot. 4-foot fence is cheaper than 6-foot. Vinyl-coated chain link costs $2-$3 more per foot.',
+    },
+    {
+      question: 'How deep should chain link fence posts be buried?',
+      answer: 'Bury line posts 2 feet deep. Terminal posts (corners, ends, gates) should be 3 feet deep. In frost areas, go below frost line. Use concrete for all posts.',
+    },
+    {
+      question: 'Can I install chain link fence myself?',
+      answer: 'Yes, chain link is DIY-friendly with basic tools: post hole digger, level, come-along or fence puller, and wrenches. Most homeowners can install 100 feet in a weekend. Rent a power auger for post holes.',
     },
   ];
 

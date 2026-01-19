@@ -50,11 +50,23 @@ export default function MaterialCostEstimator() {
   const faqs = [
     {
       question: 'Why add a waste factor?',
-      answer: 'Waste factors account for cuts, breakage, and mistakes. 10% is standard for most materials. Use 15-20% for complex projects.',
+      answer: 'Waste factors account for cuts, breakage, and mistakes. 10% is standard for most materials. Use 15-20% for complex projects with many angles or cuts.',
     },
     {
       question: 'What materials need waste factors?',
-      answer: 'All construction materials benefit from waste factors: lumber, drywall, flooring, roofing, siding, concrete, etc.',
+      answer: 'All construction materials benefit from waste factors: lumber, drywall, flooring, roofing, siding, concrete, bricks, tiles, and more. Even bulk materials like gravel settle and compact.',
+    },
+    {
+      question: 'How do I calculate material cost for a project?',
+      answer: 'Measure your project dimensions accurately, calculate quantity needed, add waste factor (typically 10%), then multiply by unit cost. Always get quotes from multiple suppliers for best pricing.',
+    },
+    {
+      question: 'Should I buy extra materials?',
+      answer: 'Yes, always order 10-15% extra. This accounts for waste, mistakes, and future repairs. Matching materials later can be difficult due to dye lots, discontinuation, or material changes.',
+    },
+    {
+      question: 'What affects material pricing?',
+      answer: 'Material prices vary by location, season, supplier, quantity ordered, delivery distance, and current market conditions. Bulk orders often get discounts. Compare prices from at least 3 suppliers.',
     },
   ];
 

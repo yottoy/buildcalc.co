@@ -46,11 +46,23 @@ export default function FencePostCalculator() {
   const faqs = [
     {
       question: 'How far apart should fence posts be?',
-      answer: 'Standard spacing is 8 feet for wood fences, 10 feet for chain link. Closer spacing provides more strength.',
+      answer: 'Standard spacing is 8 feet for wood fences, 10 feet for chain link, 6-8 feet for vinyl. Closer spacing provides more strength. Use 6-foot spacing for fences over 6 feet tall or in high-wind areas.',
     },
     {
       question: 'How deep should fence posts be buried?',
-      answer: 'Bury posts at least 1/3 of their height, or minimum 2 feet deep. In cold climates, go below frost line (3-4 feet).',
+      answer: 'Bury posts at least 1/3 of their height, or minimum 2 feet deep for 6-foot fences. In cold climates, go below frost line (typically 3-4 feet). Corner and gate posts need extra depth.',
+    },
+    {
+      question: 'What size fence posts should I use?',
+      answer: 'Use 4x4 posts for fences up to 6 feet tall. For 8-foot fences, use 6x6 posts. Corner posts and gate posts should be one size larger than line posts for extra strength.',
+    },
+    {
+      question: 'Should I use pressure-treated posts?',
+      answer: 'Yes, always use pressure-treated lumber rated for ground contact (.40 or higher retention). Cedar and redwood naturally resist rot but cost more. Treated posts last 20-30 years.',
+    },
+    {
+      question: 'How much concrete do I need per post?',
+      answer: 'Use 2 bags of 50lb concrete mix per post for standard installations. For larger 6x6 posts or loose soil, use 3 bags. Mix to a thick consistency and tamp around post.',
     },
   ];
 

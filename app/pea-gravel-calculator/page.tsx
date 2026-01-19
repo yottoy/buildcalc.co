@@ -50,11 +50,23 @@ export default function PeaGravelCalculator() {
   const faqs = [
     {
       question: 'What is pea gravel used for?',
-      answer: 'Pea gravel is ideal for walkways, patios, playgrounds, and decorative landscaping. Its smooth, rounded stones are comfortable to walk on.',
+      answer: 'Pea gravel is ideal for walkways, patios, playgrounds, driveways, landscaping, drainage, and around pools. Its smooth, rounded stones are comfortable to walk on and gentle on bare feet.',
     },
     {
       question: 'How deep should pea gravel be?',
-      answer: 'Use 2-3 inches for walkways and patios. For playgrounds, use 9-12 inches for proper cushioning.',
+      answer: 'Use 2-3 inches for walkways and patios. For playgrounds, use 9-12 inches for proper cushioning and safety. Driveways need 4-6 inches over compacted base.',
+    },
+    {
+      question: 'What size is pea gravel?',
+      answer: 'Pea gravel stones are typically 1/4 to 3/8 inch in diameter, about the size of a pea. This small, uniform size makes it comfortable to walk on and easy to spread.',
+    },
+    {
+      question: 'Do I need landscape fabric under pea gravel?',
+      answer: 'Yes, always install landscape fabric or weed barrier under pea gravel. This prevents weeds from growing through and keeps gravel from sinking into soil. Use commercial-grade fabric for durability.',
+    },
+    {
+      question: 'How much does pea gravel cost?',
+      answer: 'Pea gravel costs $30-$60 per ton or $35-$55 per cubic yard depending on location and supplier. Bulk delivery is more economical than bags for projects over 1 cubic yard.',
     },
   ];
 

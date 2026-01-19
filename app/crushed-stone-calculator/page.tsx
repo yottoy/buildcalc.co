@@ -50,11 +50,23 @@ export default function CrushedStoneCalculator() {
   const faqs = [
     {
       question: 'What is crushed stone used for?',
-      answer: 'Crushed stone is used for driveways, road base, concrete aggregate, drainage systems, and landscaping. It compacts well and provides excellent drainage.',
+      answer: 'Crushed stone is used for driveways, road base, concrete aggregate, drainage systems, French drains, paver base, and landscaping. It compacts well and provides excellent drainage due to angular edges.',
     },
     {
       question: 'How deep should crushed stone be?',
-      answer: 'Driveways: 4-6 inches. Road base: 6-8 inches. Drainage: 4-6 inches. Always compact in layers.',
+      answer: 'Driveways: 4-6 inches. Road base: 6-8 inches. Drainage: 4-6 inches. Paver base: 4-6 inches. Always compact in 2-inch layers for stability.',
+    },
+    {
+      question: 'What size crushed stone should I use?',
+      answer: '3/4-inch (#57 stone) is most common for driveways and base layers. #411 (crushed stone with fines) compacts best. #8 (3/8-inch) is used for paver base. Larger 1.5-inch stone is for drainage.',
+    },
+    {
+      question: 'Is crushed stone better than gravel?',
+      answer: 'Crushed stone has angular edges that interlock and compact better than round gravel, making it superior for driveways and base layers. Round gravel is better for decorative landscaping and walking surfaces.',
+    },
+    {
+      question: 'How do I compact crushed stone?',
+      answer: 'Use a plate compactor for areas under 1,000 sq ft or a roller for larger areas. Compact in 2-inch lifts, making 3-4 passes per layer. Spray with water while compacting for best results.',
     },
   ];
 

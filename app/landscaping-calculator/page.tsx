@@ -60,11 +60,23 @@ export default function LandscapingCalculator() {
   const faqs = [
     {
       question: 'How deep should mulch be?',
-      answer: 'Apply 2-3 inches of mulch for flower beds and around trees. Too much mulch can suffocate plant roots.',
+      answer: 'Apply 2-3 inches of mulch for flower beds and around trees. Too much mulch can suffocate plant roots and create pest problems. Keep mulch 3 inches away from plant stems and tree trunks.',
     },
     {
       question: 'How often should I replace mulch?',
-      answer: 'Refresh mulch annually. Organic mulch decomposes and needs replacement every 1-2 years.',
+      answer: 'Refresh mulch annually. Organic mulch decomposes and needs replacement every 1-2 years. Add 1-2 inches each spring to maintain depth and appearance.',
+    },
+    {
+      question: 'What type of mulch is best for landscaping?',
+      answer: 'Hardwood mulch lasts longest (2-3 years). Pine bark is lighter and better for slopes. Cedar resists insects. Rubber mulch never decomposes but doesn\'t enrich soil. Choose based on your needs and aesthetics.',
+    },
+    {
+      question: 'How much topsoil do I need for a lawn?',
+      answer: 'New lawns need 4-6 inches of quality topsoil. Topdressing existing lawns needs 1/4 to 1/2 inch. For gardens and flower beds, use 6-8 inches of topsoil mixed with compost.',
+    },
+    {
+      question: 'Can I install landscaping materials myself?',
+      answer: 'Yes, most landscaping materials are DIY-friendly. Topsoil and mulch require spreading and raking. Decorative rock needs landscape fabric underneath. Rent equipment for large projects to save time and effort.',
     },
   ];
 

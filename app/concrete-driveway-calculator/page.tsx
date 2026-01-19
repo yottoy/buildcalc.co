@@ -55,6 +55,18 @@ export default function ConcreteDrivewayCalculator() {
       question: 'Do I need rebar in my driveway?',
       answer: 'Wire mesh or rebar is recommended for driveways to prevent cracking. Use 6x6 wire mesh or #3 rebar on 18-inch centers.',
     },
+    {
+      question: 'How much does a concrete driveway cost per square foot?',
+      answer: 'Concrete driveways cost $4-$8 per square foot for materials and installation. Basic 4-inch slabs average $6/sq ft. Decorative finishes like stamping or staining add $2-$4/sq ft.',
+    },
+    {
+      question: 'Is concrete or asphalt better for driveways?',
+      answer: 'Concrete lasts 30-40 years vs. asphalt\'s 15-20 years. Concrete costs more upfront but requires less maintenance. Asphalt is better for cold climates with freeze-thaw cycles and can be installed faster.',
+    },
+    {
+      question: 'How long does concrete take to cure?',
+      answer: 'Concrete reaches 70% strength in 7 days and full strength in 28 days. Wait 7 days before driving on it, 28 days before parking heavy vehicles like RVs or trucks.',
+    },
   ];
 
   return (
