@@ -35,7 +35,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
       {/* FAQ Content with structured data markup */}
       <section className="mt-12 border-t border-gray-200 pt-12">
         <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
-        <div className="space-y-6" itemScope itemType="https://schema.org/FAQPage">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
             <div 
               key={index} 
