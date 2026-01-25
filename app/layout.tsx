@@ -25,6 +25,13 @@ export const metadata: Metadata = {
     siteName: "Build Calculators",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.buildcalc.co",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

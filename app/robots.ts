@@ -6,6 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: [
+          '/_next/static/media/',  // Block font files
+          '/_next/static/chunks/',  // Block JS chunks
+          '/_next/image',           // Block image optimization API
+          '/api/',                  // Block API routes if any
+        ],
       },
       {
         // OpenAI GPTBot (ChatGPT)
