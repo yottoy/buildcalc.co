@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Bulk Material Calculator - Gravel, Sand, Dirt | BuildCalc 2025',
   description: 'Calculate cubic yards for bulk construction materials. Free calculator for gravel, sand, topsoil, mulch, and more. Get instant estimates. Updated January 2025.',
   keywords: ['bulk material calculator', 'material calculator', 'gravel calculator', 'topsoil calculator', 'mulch calculator', 'bulk calculator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Bulk Material Calculator - Gravel, Sand, Dirt | BuildCalc',
     description: 'Calculate cubic yards for bulk construction and landscaping materials',
-    url: 'https://buildcalc.co/bulk-material-calculator',
+    url: 'https://www.buildcalc.co/bulk-material-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/bulk-material-calculator',
+    canonical: 'https://www.buildcalc.co/bulk-material-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Calculate cubic yards for bulk construction and landscaping materials with instant ton estimates.",
-            "url": "https://buildcalc.co/bulk-material-calculator",
+            "url": "https://www.buildcalc.co/bulk-material-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

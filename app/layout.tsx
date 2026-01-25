@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Build Calculators - Free Construction Material Calculators",
     description: "Professional construction calculators for contractors and DIYers",
-    url: "https://buildcalc.co",
+    url: "https://www.buildcalc.co",
     siteName: "Build Calculators",
     type: "website",
   },
@@ -57,7 +57,7 @@ export default function RootLayout({
               "@type": "WebSite",
               name: "Build Calculators",
               description: "Free construction and landscaping calculators for contractors and DIYers",
-              url: "https://buildcalc.co",
+              url: "https://www.buildcalc.co",
               datePublished: "2025-01-18",
               dateModified: "2025-01-18",
             }),
@@ -71,7 +71,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Build Calculators Team",
               jobTitle: "Construction Calculator Specialists",
-              url: "https://buildcalc.co",
+              url: "https://www.buildcalc.co",
             }),
           }}
         />

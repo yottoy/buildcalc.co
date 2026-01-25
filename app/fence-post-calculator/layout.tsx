@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Fence Post Calculator - Free Post Spacing Estimator | BuildCalc 2025',
   description: 'Calculate number of fence posts required for your project. Free calculator includes concrete bag estimates. Perfect for all fence types. Updated January 2025.',
   keywords: ['fence post calculator', 'post calculator', 'fence post estimator', 'post spacing calculator', 'fence post spacing', 'concrete for fence posts'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Fence Post Calculator - Post Spacing Estimator | BuildCalc',
     description: 'Calculate number of fence posts required for your project',
-    url: 'https://buildcalc.co/fence-post-calculator',
+    url: 'https://www.buildcalc.co/fence-post-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/fence-post-calculator',
+    canonical: 'https://www.buildcalc.co/fence-post-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Calculate number of fence posts required for your project with concrete estimates.",
-            "url": "https://buildcalc.co/fence-post-calculator",
+            "url": "https://www.buildcalc.co/fence-post-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

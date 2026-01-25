@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'French Drain Calculator - Drainage Material Estimator | BuildCalc 2025',
   description: 'Calculate materials needed for French drain installation. Free calculator for gravel, pipe, and fabric. Perfect for drainage systems. Updated January 2025.',
   keywords: ['french drain calculator', 'drainage calculator', 'drain pipe calculator', 'perforated pipe calculator', 'drainage system calculator', 'yard drainage calculator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free French Drain Calculator - Drainage Estimator | BuildCalc',
     description: 'Estimate materials needed for French drain and drainage systems',
-    url: 'https://buildcalc.co/french-drain-calculator',
+    url: 'https://www.buildcalc.co/french-drain-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/french-drain-calculator',
+    canonical: 'https://www.buildcalc.co/french-drain-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Estimate materials needed for drainage systems including gravel, pipe, and landscape fabric.",
-            "url": "https://buildcalc.co/french-drain-calculator",
+            "url": "https://www.buildcalc.co/french-drain-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Landscaping Calculator - Garden Material Estimator | BuildCalc 2025',
   description: 'Calculate materials for landscaping and garden projects. Free calculator for mulch, topsoil, compost, and decorative rock. Updated January 2025.',
   keywords: ['landscaping calculator', 'garden calculator', 'landscape material calculator', 'mulch calculator', 'landscaping estimator', 'yard calculator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Landscaping Calculator - Garden Materials | BuildCalc',
     description: 'Calculate materials for landscaping and garden projects',
-    url: 'https://buildcalc.co/landscaping-calculator',
+    url: 'https://www.buildcalc.co/landscaping-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/landscaping-calculator',
+    canonical: 'https://www.buildcalc.co/landscaping-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Calculate materials for landscaping and garden projects with instant cubic yard estimates.",
-            "url": "https://buildcalc.co/landscaping-calculator",
+            "url": "https://www.buildcalc.co/landscaping-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Brick Calculator - Free Wall & Patio Estimator | BuildCalc 2025',
   description: 'Calculate bricks required for walls and patios. Free calculator includes mortar bag estimates. Perfect for masonry projects. Updated January 2025.',
   keywords: ['brick calculator', 'brick estimator', 'masonry calculator', 'brick wall calculator', 'brick patio calculator', 'mortar calculator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Brick Calculator - Wall & Patio Estimator | BuildCalc',
     description: 'Estimate number of bricks required for walls and construction projects',
-    url: 'https://buildcalc.co/brick-calculator',
+    url: 'https://www.buildcalc.co/brick-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/brick-calculator',
+    canonical: 'https://www.buildcalc.co/brick-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Estimate number of bricks required for walls and construction projects with mortar calculations.",
-            "url": "https://buildcalc.co/brick-calculator",
+            "url": "https://www.buildcalc.co/brick-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

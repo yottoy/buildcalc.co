@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Dirt Calculator - Topsoil & Fill Dirt Estimator | BuildCalc 2025',
   description: 'Calculate fill dirt or topsoil needed for landscaping projects. Free calculator shows cubic yards and tons. Perfect for grading and gardens. Updated January 2025.',
   keywords: ['dirt calculator', 'topsoil calculator', 'fill dirt calculator', 'soil calculator', 'landscaping dirt calculator', 'cubic yards dirt'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Dirt Calculator - Topsoil & Fill Dirt | BuildCalc',
     description: 'Calculate dirt needed for your landscaping and grading projects',
-    url: 'https://buildcalc.co/dirt-calculator',
+    url: 'https://www.buildcalc.co/dirt-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/dirt-calculator',
+    canonical: 'https://www.buildcalc.co/dirt-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Calculate fill dirt or topsoil needed for landscaping with instant cubic yard calculations.",
-            "url": "https://buildcalc.co/dirt-calculator",
+            "url": "https://www.buildcalc.co/dirt-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

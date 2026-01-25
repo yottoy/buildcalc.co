@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Material Cost Estimator - Construction Calculator | BuildCalc 2025',
   description: 'Estimate total material costs for construction projects. Free calculator includes waste factors and quantity calculations. Updated January 2025.',
   keywords: ['material cost estimator', 'material calculator', 'construction material cost', 'building material estimator', 'material cost calculator', 'construction estimator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Material Cost Estimator - Construction Calculator | BuildCalc',
     description: 'Estimate total material costs for construction projects',
-    url: 'https://buildcalc.co/material-cost-estimator',
+    url: 'https://www.buildcalc.co/material-cost-estimator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/material-cost-estimator',
+    canonical: 'https://www.buildcalc.co/material-cost-estimator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Estimate total material costs for construction projects with waste factor calculations.",
-            "url": "https://buildcalc.co/material-cost-estimator",
+            "url": "https://www.buildcalc.co/material-cost-estimator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

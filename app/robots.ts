@@ -33,6 +33,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://buildcalc.co/sitemap.xml',
+    sitemap: 'https://www.buildcalc.co/sitemap.xml',
   };
 }

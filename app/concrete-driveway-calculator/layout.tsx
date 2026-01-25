@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Concrete Driveway Calculator - Free Estimator | BuildCalc 2025',
   description: 'Calculate concrete needed for driveway projects. Free calculator shows cubic yards for residential and commercial driveways. Updated January 2025.',
   keywords: ['concrete driveway calculator', 'driveway calculator', 'concrete calculator driveway', 'driveway concrete estimator', 'concrete slab calculator', 'driveway cost calculator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Concrete Driveway Calculator | BuildCalc',
     description: 'Calculate concrete needed for driveway projects',
-    url: 'https://buildcalc.co/concrete-driveway-calculator',
+    url: 'https://www.buildcalc.co/concrete-driveway-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/concrete-driveway-calculator',
+    canonical: 'https://www.buildcalc.co/concrete-driveway-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Calculate concrete needed for driveway projects with instant cubic yard estimates.",
-            "url": "https://buildcalc.co/concrete-driveway-calculator",
+            "url": "https://www.buildcalc.co/concrete-driveway-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",

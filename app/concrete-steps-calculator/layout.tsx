@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Concrete Steps Calculator - Free Stair Estimator | BuildCalc 2025',
   description: 'Calculate concrete needed for steps and stairs. Free calculator shows cubic yards and 80lb bags required. Perfect for outdoor steps. Updated January 2025.',
   keywords: ['concrete steps calculator', 'stair calculator', 'concrete stairs calculator', 'steps estimator', 'outdoor steps calculator', 'concrete staircase calculator'],
-  authors: [{ name: 'Marcus Rivera', url: 'https://buildcalc.co' }],
+  authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
     title: 'Free Concrete Steps Calculator - Stair Estimator | BuildCalc',
     description: 'Calculate concrete needed for your steps and stairs project',
-    url: 'https://buildcalc.co/concrete-steps-calculator',
+    url: 'https://www.buildcalc.co/concrete-steps-calculator',
     siteName: 'BuildCalc',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://buildcalc.co/concrete-steps-calculator',
+    canonical: 'https://www.buildcalc.co/concrete-steps-calculator',
   },
   robots: {
     index: true,
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "priceCurrency": "USD"
             },
             "description": "Calculate concrete needed for steps and stairs projects with instant cubic yard estimates.",
-            "url": "https://buildcalc.co/concrete-steps-calculator",
+            "url": "https://www.buildcalc.co/concrete-steps-calculator",
             "author": {
               "@type": "Person",
               "name": "Marcus Rivera",
