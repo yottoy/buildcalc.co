@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Construction Cost Calculator - Project Estimator | BuildCalc 2025',
-  description: 'Estimate total construction project costs including materials and labor. Free calculator for renovations and new builds. Get instant quotes. Updated January 2025.',
-  keywords: ['construction cost calculator', 'building cost calculator', 'construction estimator', 'renovation cost calculator', 'project cost estimator', 'construction pricing'],
+  title: 'Construction Cost Estimator - Free Building Cost Calculator 2025',
+  description: 'Free construction cost estimator calculates building costs instantly. Estimate construction project costs per square foot for renovations, new builds, and remodels. Calculate material and labor costs.',
+  keywords: ['construction cost estimator', 'construction cost calculator', 'building cost estimator', 'building cost calculator', 'construction cost estimate', 'estimate construction cost', 'building estimate cost', 'cost estimator construction', 'construction labor cost estimator', 'new construction cost estimator', 'home building cost calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free Construction Cost Calculator - Project Estimator | BuildCalc',
-    description: 'Estimate total construction project material and labor costs',
+    title: 'Construction Cost Estimator - Free Building Cost Calculator',
+    description: 'Calculate construction and building costs per square foot. Free estimator for materials, labor, and total project costs for new construction and renovations.',
     url: 'https://www.buildcalc.co/construction-cost-calculator',
     siteName: 'BuildCalc',
     type: 'website',

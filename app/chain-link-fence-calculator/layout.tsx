@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Chain Link Fence Calculator - Free Materials Estimator | BuildCalc 2025',
-  description: 'Calculate chain link fencing materials and posts needed. Free calculator for residential and commercial fences. Updated January 2025.',
-  keywords: ['chain link fence calculator', 'chain link calculator', 'fence calculator', 'wire fence calculator', 'chain link estimator', 'fence post calculator'],
+  title: 'Chain Link Fence Calculator - Free Cost Estimator & Material Calculator 2025',
+  description: 'Free chain link fence calculator estimates materials, posts, and costs instantly. Calculate chain link fence cost, post spacing, and fabric needed for residential & commercial projects.',
+  keywords: ['chain link fence calculator', 'chain link fence cost calculator', 'chain link fence estimator', 'chain link fence cost estimator', 'fence calculator', 'chain link calculator', 'commercial chain link fence calculator', 'fence post spacing calculator', 'chain link fence material calculator', 'chain link fence price calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free Chain Link Fence Calculator - Materials Estimator | BuildCalc',
-    description: 'Estimate chain link fencing materials and posts needed',
+    title: 'Chain Link Fence Calculator - Free Cost & Material Estimator',
+    description: 'Calculate chain link fence costs, materials, and post spacing instantly. Free estimator for residential and commercial chain link fencing projects.',
     url: 'https://www.buildcalc.co/chain-link-fence-calculator',
     siteName: 'BuildCalc',
     type: 'website',

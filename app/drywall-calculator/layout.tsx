@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Drywall Calculator - Free Sheet Estimator | BuildCalc 2025',
-  description: 'Calculate drywall sheets needed for walls and ceilings. Free calculator includes screws, tape, and compound estimates. Used by contractors. Updated January 2025.',
-  keywords: ['drywall calculator', 'sheetrock calculator', 'drywall estimator', 'drywall sheet calculator', 'gypsum board calculator', 'wall calculator'],
+  title: 'Drywall Calculator - How Many Sheets Do I Need? Free Estimator 2025',
+  description: 'Free drywall calculator answers "how many sheets of drywall do I need?" Instant estimates for drywall sheets, screws, tape, and mud. Calculate drywall square footage for walls and ceilings.',
+  keywords: ['drywall calculator', 'how many sheets of drywall do i need', 'drywall estimator', 'sheetrock calculator', 'drywall square foot calculator', 'how much drywall do i need', 'drywall sheet calculator', 'how many square feet in a sheet of drywall', 'sheetrock estimator', 'drywall cost calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free Drywall Calculator - Estimate Sheets & Materials | BuildCalc',
-    description: 'Calculate drywall sheets needed for your walls and ceilings project',
+    title: 'Drywall Calculator - How Many Sheets Do I Need? Free Estimator',
+    description: 'Calculate how many sheets of drywall you need instantly. Free drywall estimator includes screws, tape, and compound for walls and ceilings.',
     url: 'https://www.buildcalc.co/drywall-calculator',
     siteName: 'BuildCalc',
     type: 'website',
