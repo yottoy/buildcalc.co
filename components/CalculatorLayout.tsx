@@ -29,13 +29,13 @@ export default function CalculatorLayout({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://buildcalc.co"
+        "item": "https://www.buildcalc.co"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": title,
-        "item": `https://buildcalc.co/${slug}`
+        "item": `https://www.buildcalc.co/${slug}`
       }
     ]
   };
