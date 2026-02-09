@@ -37,6 +37,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const staticPages = [
+    { slug: 'about', priority: 0.5 },
+    { slug: 'terms', priority: 0.3 },
+    { slug: 'privacy', priority: 0.3 },
+    { slug: 'contact', priority: 0.5 },
+  ];
+
+  const staticUrls = staticPages.map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: page.priority,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -45,5 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...calculatorUrls,
+    ...staticUrls,
   ];
 }

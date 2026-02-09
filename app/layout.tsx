@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Build Calculators - Free Construction Material Calculators | 2025",
-  description: "Calculate asphalt, concrete, gravel, sand, and more. Free construction calculators with accurate formulas. Updated January 2025.",
+  title: "Build Calculators - Free Construction Material Calculators | 2026",
+  description: "Calculate asphalt, concrete, gravel, sand, and more. Free construction calculators with accurate formulas. Updated February 2026.",
   authors: [{ name: "Build Calculators Team" }],
   keywords: ["construction calculator", "material calculator", "asphalt calculator", "concrete calculator", "gravel calculator"],
   openGraph: {
@@ -66,7 +66,7 @@ export default function RootLayout({
               description: "Free construction and landscaping calculators for contractors and DIYers",
               url: "https://www.buildcalc.co",
               datePublished: "2025-01-18",
-              dateModified: "2025-01-18",
+              dateModified: "2026-02-09",
             }),
           }}
         />
@@ -125,13 +125,13 @@ export default function RootLayout({
                     <span itemProp="jobTitle" className="text-gray-600">Construction Calculator Specialists</span>
                   </p>
                   <p className="text-xs text-gray-500 mt-4">
-                    Last updated: January 2025
+                    Last updated: February 2026
                   </p>
                 </div>
               </div>
               
               <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600">
-                <p>&copy; 2025 Build Calculators. All rights reserved.</p>
+                <p>&copy; 2026 Build Calculators. All rights reserved.</p>
                 <div className="mt-2 space-x-4">
                   <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
                   <Link href="/terms" className="hover:text-foreground">Terms of Service</Link>

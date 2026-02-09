@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Gravel Cost Calculator - Free Price Estimator | BuildCalc 2025',
-  description: 'Calculate gravel costs based on project requirements. Free calculator for crushed stone, pea gravel, river rock, and limestone. Updated January 2025.',
+  title: 'Gravel Cost Calculator - Free Price Estimator | BuildCalc 2026',
+  description: 'Calculate gravel costs based on project requirements. Free calculator for crushed stone, pea gravel, river rock, and limestone. Updated February 2026.',
   keywords: ['gravel cost calculator', 'gravel calculator', 'gravel price calculator', 'crushed stone cost', 'gravel estimator', 'driveway gravel cost'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

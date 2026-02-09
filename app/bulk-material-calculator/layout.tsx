@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bulk Material Calculator - Gravel, Sand, Dirt | BuildCalc 2025',
-  description: 'Calculate cubic yards for bulk construction materials. Free calculator for gravel, sand, topsoil, mulch, and more. Get instant estimates. Updated January 2025.',
+  title: 'Bulk Material Calculator - Gravel, Sand, Dirt | BuildCalc 2026',
+  description: 'Calculate cubic yards for bulk construction materials. Free calculator for gravel, sand, topsoil, mulch, and more. Get instant estimates. Updated February 2026.',
   keywords: ['bulk material calculator', 'material calculator', 'gravel calculator', 'topsoil calculator', 'mulch calculator', 'bulk calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

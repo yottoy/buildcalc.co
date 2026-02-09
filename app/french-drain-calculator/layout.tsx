@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'French Drain Calculator - Drainage Material Estimator | BuildCalc 2025',
-  description: 'Calculate materials needed for French drain installation. Free calculator for gravel, pipe, and fabric. Perfect for drainage systems. Updated January 2025.',
+  title: 'French Drain Calculator - Drainage Material Estimator | BuildCalc 2026',
+  description: 'Calculate materials needed for French drain installation. Free calculator for gravel, pipe, and fabric. Perfect for drainage systems. Updated February 2026.',
   keywords: ['french drain calculator', 'drainage calculator', 'drain pipe calculator', 'perforated pipe calculator', 'drainage system calculator', 'yard drainage calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

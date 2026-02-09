@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sand Calculator - Free Cubic Yards Estimator | BuildCalc 2025',
-  description: 'Calculate sand needed for construction and landscaping projects. Free calculator for masonry sand, play sand, concrete sand. Updated January 2025.',
+  title: 'Sand Calculator - Free Cubic Yards Estimator | BuildCalc 2026',
+  description: 'Calculate sand needed for construction and landscaping projects. Free calculator for masonry sand, play sand, concrete sand. Updated February 2026.',
   keywords: ['sand calculator', 'masonry sand calculator', 'play sand calculator', 'concrete sand calculator', 'beach sand calculator', 'sand cubic yards'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

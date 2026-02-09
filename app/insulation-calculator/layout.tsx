@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Insulation Calculator - R-Value Estimator | BuildCalc 2025',
-  description: 'Calculate insulation materials needed for walls and attics. Free calculator for batt, blown-in, and spray foam insulation. Updated January 2025.',
+  title: 'Insulation Calculator - R-Value Estimator | BuildCalc 2026',
+  description: 'Calculate insulation materials needed for walls and attics. Free calculator for batt, blown-in, and spray foam insulation. Updated February 2026.',
   keywords: ['insulation calculator', 'insulation estimator', 'r-value calculator', 'attic insulation calculator', 'wall insulation calculator', 'insulation material calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

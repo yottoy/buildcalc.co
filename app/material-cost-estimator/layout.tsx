@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Material Calculator - Free Materials Cost Estimator 2025',
+  title: 'Material Calculator - Free Materials Cost Estimator 2026',
   description: 'Free material calculator estimates construction and building materials costs instantly. Calculate materials needed with waste factors for any project. Simple materials calculator for contractors and DIYers.',
   keywords: ['material calculator', 'materials calculator', 'material cost estimator', 'calculator for building materials', 'construction material calculator', 'building material estimator', 'material cost calculator', 'materials calculator gravel', 'construction materials estimator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

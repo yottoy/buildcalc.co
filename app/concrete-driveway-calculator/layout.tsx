@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Concrete Driveway Calculator - Free Estimator | BuildCalc 2025',
-  description: 'Calculate concrete needed for driveway projects. Free calculator shows cubic yards for residential and commercial driveways. Updated January 2025.',
+  title: 'Concrete Driveway Calculator - Free Estimator | BuildCalc 2026',
+  description: 'Calculate concrete needed for driveway projects. Free calculator shows cubic yards for residential and commercial driveways. Updated February 2026.',
   keywords: ['concrete driveway calculator', 'driveway calculator', 'concrete calculator driveway', 'driveway concrete estimator', 'concrete slab calculator', 'driveway cost calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

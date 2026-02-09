@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Construction Cost Estimator - Free Building Cost Calculator 2025',
+  title: 'Construction Cost Estimator - Free Building Cost Calculator 2026',
   description: 'Free construction cost estimator calculates building costs instantly. Estimate construction project costs per square foot for renovations, new builds, and remodels. Calculate material and labor costs.',
   keywords: ['construction cost estimator', 'construction cost calculator', 'building cost estimator', 'building cost calculator', 'construction cost estimate', 'estimate construction cost', 'building estimate cost', 'cost estimator construction', 'construction labor cost estimator', 'new construction cost estimator', 'home building cost calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

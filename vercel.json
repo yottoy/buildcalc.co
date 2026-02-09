@@ -33,6 +33,24 @@
           "value": "max-age=31536000; includeSubDomains; preload"
         }
       ]
+    },
+    {
+      "source": "/_next/static/media/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/chunks/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dirt Calculator - Topsoil & Fill Dirt Estimator | BuildCalc 2025',
-  description: 'Calculate fill dirt or topsoil needed for landscaping projects. Free calculator shows cubic yards and tons. Perfect for grading and gardens. Updated January 2025.',
+  title: 'Dirt Calculator - Topsoil & Fill Dirt Estimator | BuildCalc 2026',
+  description: 'Calculate fill dirt or topsoil needed for landscaping projects. Free calculator shows cubic yards and tons. Perfect for grading and gardens. Updated February 2026.',
   keywords: ['dirt calculator', 'topsoil calculator', 'fill dirt calculator', 'soil calculator', 'landscaping dirt calculator', 'cubic yards dirt'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-04"
           })
         }}
       />

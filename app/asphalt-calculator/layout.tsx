@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Asphalt Calculator - Free Tons & Cost Estimator | BuildCalc 2025',
-  description: 'Calculate tons of asphalt needed for driveways and parking lots. Free calculator shows cubic yards and costs. Used by contractors nationwide. Updated January 2025.',
+  title: 'Asphalt Calculator - Free Tons & Cost Estimator | BuildCalc 2026',
+  description: 'Calculate tons of asphalt needed for driveways and parking lots. Free calculator shows cubic yards and costs. Used by contractors nationwide. Updated February 2026.',
   keywords: ['asphalt calculator', 'driveway calculator', 'asphalt tons calculator', 'paving calculator', 'asphalt cost calculator', 'driveway cost estimator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

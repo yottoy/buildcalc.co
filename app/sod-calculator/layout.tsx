@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sod Calculator - Free Lawn & Grass Estimator | BuildCalc 2025',
-  description: 'Calculate sod needed for lawn installation. Free calculator shows square feet, rolls, pallets, and costs. Perfect for new lawns. Updated January 2025.',
+  title: 'Sod Calculator - Free Lawn & Grass Estimator | BuildCalc 2026',
+  description: 'Calculate sod needed for lawn installation. Free calculator shows square feet, rolls, pallets, and costs. Perfect for new lawns. Updated February 2026.',
   keywords: ['sod calculator', 'lawn calculator', 'grass calculator', 'turf calculator', 'sod roll calculator', 'new lawn calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

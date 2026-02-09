@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Concrete Cost Calculator - Free Price Estimator | BuildCalc 2025',
-  description: 'Estimate total concrete costs based on project dimensions. Free calculator shows ready-mix vs bagged costs. Get accurate pricing. Updated January 2025.',
+  title: 'Concrete Cost Calculator - Free Price Estimator | BuildCalc 2026',
+  description: 'Estimate total concrete costs based on project dimensions. Free calculator shows ready-mix vs bagged costs. Get accurate pricing. Updated February 2026.',
   keywords: ['concrete cost calculator', 'concrete price calculator', 'ready mix concrete cost', 'concrete estimator', 'concrete cost per yard', 'concrete pricing'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

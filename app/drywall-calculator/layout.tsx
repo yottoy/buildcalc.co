@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Drywall Calculator - How Many Sheets Do I Need? Free Estimator 2025',
+  title: 'Drywall Calculator - How Many Sheets Do I Need? Free Estimator 2026',
   description: 'Free drywall calculator answers "how many sheets of drywall do I need?" Instant estimates for drywall sheets, screws, tape, and mud. Calculate drywall square footage for walls and ceilings.',
   keywords: ['drywall calculator', 'how many sheets of drywall do i need', 'drywall estimator', 'sheetrock calculator', 'drywall square foot calculator', 'how much drywall do i need', 'drywall sheet calculator', 'how many square feet in a sheet of drywall', 'sheetrock estimator', 'drywall cost calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-04"
           })
         }}
       />

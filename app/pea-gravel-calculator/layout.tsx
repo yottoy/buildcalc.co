@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pea Gravel Calculator - Free Landscaping Estimator | BuildCalc 2025',
-  description: 'Calculate pea gravel needed for landscaping projects. Free calculator for walkways, patios, and playgrounds. Get instant cubic yards. Updated January 2025.',
+  title: 'Pea Gravel Calculator - Free Landscaping Estimator | BuildCalc 2026',
+  description: 'Calculate pea gravel needed for landscaping projects. Free calculator for walkways, patios, and playgrounds. Get instant cubic yards. Updated February 2026.',
   keywords: ['pea gravel calculator', 'pea stone calculator', 'pea gravel estimator', 'landscaping gravel calculator', 'walkway gravel calculator', 'pea gravel cubic yards'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-09"
           })
         }}
       />

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Chain Link Fence Calculator - Free Cost Estimator & Material Calculator 2025',
+  title: 'Chain Link Fence Calculator - Free Cost Estimator & Material Calculator 2026',
   description: 'Free chain link fence calculator estimates materials, posts, and costs instantly. Calculate chain link fence cost, post spacing, and fabric needed for residential & commercial projects.',
   keywords: ['chain link fence calculator', 'chain link fence cost calculator', 'chain link fence estimator', 'chain link fence cost estimator', 'fence calculator', 'chain link calculator', 'commercial chain link fence calculator', 'fence post spacing calculator', 'chain link fence material calculator', 'chain link fence price calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "jobTitle": "Construction Calculator Specialist"
             },
             "datePublished": "2025-01-18",
-            "dateModified": "2025-01-18"
+            "dateModified": "2026-02-04"
           })
         }}
       />
