@@ -5,6 +5,7 @@ interface CalculatorLayoutProps {
   title: string;
   description: string;
   children: React.ReactNode;
+  lastUpdated?: string; // ISO date string, e.g. "2026-02-09"
   relatedCalculators?: Array<{
     name: string;
     slug: string;
@@ -12,15 +13,21 @@ interface CalculatorLayoutProps {
   }>;
 }
 
+function formatDate(iso: string): string {
+  const date = new Date(iso);
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
 export default function CalculatorLayout({
   title,
   description,
   children,
+  lastUpdated = '2026-03-01',
   relatedCalculators = [],
 }: CalculatorLayoutProps) {
   // Generate breadcrumb schema
   const slug = title.toLowerCase().replace(/\s+/g, '-');
-  
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -47,7 +54,7 @@ export default function CalculatorLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb with structured data */}
         <nav className="mb-6 text-sm text-gray-600 no-print" itemScope itemType="https://schema.org/BreadcrumbList">
@@ -75,7 +82,7 @@ export default function CalculatorLayout({
               By <span itemProp="name" className="font-medium text-gray-700">Marcus Rivera</span>
             </span>
             {' • '}
-            <time dateTime="2025-01-18">Last updated: January 18, 2025</time>
+            <time dateTime={lastUpdated}>Last updated: {formatDate(lastUpdated)}</time>
           </div>
         </div>
 
@@ -107,10 +114,10 @@ export default function CalculatorLayout({
         <div className="border-t border-gray-200 mt-12 pt-8 text-sm text-gray-600 no-print">
           <div itemScope itemType="https://schema.org/Person">
             <p>
-              Calculator by <span itemProp="name" className="font-medium">Marcus Rivera</span> | 
+              Calculator by <span itemProp="name" className="font-medium">Marcus Rivera</span> |
               <span itemProp="jobTitle"> Construction Calculator Specialist</span>
             </p>
-            <p className="mt-1">Last updated: January 2025</p>
+            <p className="mt-1">Last updated: <time dateTime={lastUpdated}>{formatDate(lastUpdated)}</time></p>
           </div>
         </div>
       </div>

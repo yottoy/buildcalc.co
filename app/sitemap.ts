@@ -1,60 +1,60 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.buildcalc.co'; // Update to your actual domain
-  const currentDate = new Date().toISOString();
+  const baseUrl = 'https://www.buildcalc.co';
 
-  const calculators = [
-    'asphalt-calculator',
-    'brick-calculator',
-    'bulk-material-calculator',
-    'chain-link-fence-calculator',
-    'concrete-cost-calculator',
-    'concrete-driveway-calculator',
-    'concrete-steps-calculator',
-    'construction-cost-calculator',
-    'crushed-stone-calculator',
-    'dirt-calculator',
-    'drywall-calculator',
-    'fence-post-calculator',
-    'french-drain-calculator',
-    'gravel-cost-calculator',
-    'insulation-calculator',
-    'landscaping-calculator',
-    'material-cost-estimator',
-    'paver-calculator',
-    'pea-gravel-calculator',
-    'sand-calculator',
-    'sod-calculator',
-    'stucco-calculator',
-    'wood-fence-calculator',
+  // Per-page actual last-modified dates (matches layout.tsx dateModified values)
+  const calculators: { slug: string; lastModified: string }[] = [
+    { slug: 'asphalt-calculator',          lastModified: '2026-02-09' },
+    { slug: 'brick-calculator',            lastModified: '2026-02-09' },
+    { slug: 'bulk-material-calculator',    lastModified: '2026-02-09' },
+    { slug: 'chain-link-fence-calculator', lastModified: '2026-02-04' },
+    { slug: 'concrete-cost-calculator',    lastModified: '2026-02-09' },
+    { slug: 'concrete-driveway-calculator',lastModified: '2026-02-09' },
+    { slug: 'concrete-steps-calculator',   lastModified: '2026-02-09' },
+    { slug: 'construction-cost-calculator',lastModified: '2026-02-09' },
+    { slug: 'crushed-stone-calculator',    lastModified: '2026-02-04' },
+    { slug: 'dirt-calculator',             lastModified: '2026-02-04' },
+    { slug: 'drywall-calculator',          lastModified: '2026-02-04' },
+    { slug: 'fence-post-calculator',       lastModified: '2026-02-09' },
+    { slug: 'french-drain-calculator',     lastModified: '2026-02-09' },
+    { slug: 'gravel-cost-calculator',      lastModified: '2026-02-09' },
+    { slug: 'insulation-calculator',       lastModified: '2026-02-09' },
+    { slug: 'landscaping-calculator',      lastModified: '2026-02-09' },
+    { slug: 'material-cost-estimator',     lastModified: '2026-02-09' },
+    { slug: 'paver-calculator',            lastModified: '2026-02-09' },
+    { slug: 'pea-gravel-calculator',       lastModified: '2026-02-09' },
+    { slug: 'sand-calculator',             lastModified: '2026-02-09' },
+    { slug: 'sod-calculator',              lastModified: '2026-02-09' },
+    { slug: 'stucco-calculator',           lastModified: '2026-02-09' },
+    { slug: 'wood-fence-calculator',       lastModified: '2026-02-09' },
   ];
 
-  const calculatorUrls = calculators.map((calc) => ({
-    url: `${baseUrl}/${calc}`,
-    lastModified: currentDate,
+  const calculatorUrls = calculators.map(({ slug, lastModified }) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
 
   const staticPages = [
-    { slug: 'about', priority: 0.5 },
-    { slug: 'terms', priority: 0.3 },
-    { slug: 'privacy', priority: 0.3 },
-    { slug: 'contact', priority: 0.5 },
+    { slug: 'about',   priority: 0.5, lastModified: '2026-02-09' },
+    { slug: 'contact', priority: 0.5, lastModified: '2026-02-09' },
+    { slug: 'terms',   priority: 0.3, lastModified: '2026-02-09' },
+    { slug: 'privacy', priority: 0.3, lastModified: '2026-02-09' },
   ];
 
-  const staticUrls = staticPages.map((page) => ({
-    url: `${baseUrl}/${page.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: page.priority,
+  const staticUrls = staticPages.map(({ slug, priority, lastModified }) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified,
+    changeFrequency: 'yearly' as const,
+    priority,
   }));
 
   return [
     {
       url: baseUrl,
-      lastModified: currentDate,
+      lastModified: '2026-03-01',
       changeFrequency: 'weekly',
       priority: 1,
     },

@@ -1,233 +1,78 @@
-'use client';
-
-import { useState } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
-import { InputField, SelectField, CalculatorButton, ResultDisplay, ErrorMessage } from '@/components/CalculatorForm';
 import FAQSection from '@/components/FAQSection';
 import HowToUse from '@/components/HowToUse';
+import DrywallForm from './DrywallForm';
+
+const relatedCalculators = [
+  {
+    name: 'Insulation Calculator',
+    slug: 'insulation-calculator',
+    description: 'Estimate insulation materials needed',
+  },
+  {
+    name: 'Stucco Calculator',
+    slug: 'stucco-calculator',
+    description: 'Calculate stucco materials for walls',
+  },
+  {
+    name: 'Construction Cost Calculator',
+    slug: 'construction-cost-calculator',
+    description: 'Estimate total construction costs',
+  },
+];
+
+const faqs = [
+  {
+    question: 'How many sheets of drywall do I need?',
+    answer: 'Calculate total wall area (perimeter × height) plus ceiling area (length × width), then divide by sheet size (32 sq ft for 4x8 sheets). Add 10% for waste. Example: 320 sq ft room needs 320 ÷ 32 = 10 sheets + 10% waste = 11 sheets. Use our calculator for instant results.',
+  },
+  {
+    question: 'How many square feet in a sheet of drywall?',
+    answer: 'Standard 4x8 sheet = 32 square feet. 4x10 sheet = 40 square feet. 4x12 sheet = 48 square feet. The 4x8 sheet is most common and easiest to handle. Calculate your room square footage and divide by 32 to estimate sheets needed.',
+  },
+  {
+    question: 'How do I calculate drywall square footage?',
+    answer: 'For walls: Calculate perimeter (2 × length + 2 × width) and multiply by wall height. For ceiling: Multiply room length × width. Add walls + ceiling for total square footage. Then divide by 32 (sq ft per 4x8 sheet) and add 10% waste.',
+  },
+  {
+    question: 'How much drywall do I need for a room?',
+    answer: 'Measure room length, width, and height. Our calculator computes wall area (perimeter × height) + ceiling area (length × width). For a 12x12 room with 8-foot ceilings: walls = 384 sq ft, ceiling = 144 sq ft, total = 528 sq ft ÷ 32 = 17 sheets with waste.',
+  },
+  {
+    question: 'What size drywall sheets should I use?',
+    answer: '4x8 sheets (32 sq ft) are standard and easiest to handle for DIY. 4x12 sheets (48 sq ft) reduce seams but are heavy and need 2+ people. Use 1/2" thickness for walls, 5/8" for ceilings and fire-rated applications.',
+  },
+  {
+    question: 'How do I calculate drywall for walls and ceilings?',
+    answer: 'Walls: Measure perimeter (add all wall lengths) and multiply by ceiling height. Ceiling: Multiply room length by width. Total square footage ÷ 32 (for 4x8 sheets) = number of sheets. Add 10% for waste and cuts.',
+  },
+  {
+    question: 'How much waste should I factor into drywall calculations?',
+    answer: '10% waste is standard for simple rectangular rooms. Add 15-20% for rooms with many corners, angles, windows, or openings. Complex layouts with vaulted ceilings or irregular shapes may need 20-25% waste factor.',
+  },
+  {
+    question: 'How many screws do I need per sheet of drywall?',
+    answer: 'Use screws every 12 inches on walls (32-40 screws per 4x8 sheet), every 8 inches on ceilings (48-60 screws per sheet). One pound of #6 drywall screws contains 150-200 screws. Calculate 0.5 lbs per wall sheet, 0.75 lbs per ceiling sheet.',
+  },
+  {
+    question: 'How to measure drywall or sheetrock needed?',
+    answer: 'Use a tape measure to get room length, width, and wall height. Calculate wall area: (2 × length + 2 × width) × height. Calculate ceiling: length × width. Add both, divide by 32 for 4x8 sheets. Subtract large openings over 10 sq ft, but add 10% waste.',
+  },
+  {
+    question: 'What are the dimensions of a sheet of drywall?',
+    answer: 'Standard sizes: 4x8 feet (most common, 32 sq ft), 4x10 feet (40 sq ft), 4x12 feet (48 sq ft). Standard thicknesses: 1/4" (renovations), 3/8" (overlays), 1/2" (walls), 5/8" (ceilings, fire-rated). Width is always 4 feet, length varies.',
+  },
+];
 
 export default function DrywallCalculator() {
-  const [length, setLength] = useState<string>('');
-  const [width, setWidth] = useState<string>('');
-  const [height, setHeight] = useState<string>('8');
-  const [sheetSize, setSheetSize] = useState<string>('4x8');
-  const [wasteFactor, setWasteFactor] = useState<string>('10');
-  const [results, setResults] = useState<any>(null);
-  const [error, setError] = useState<string>('');
-
-  const calculate = () => {
-    setError('');
-    
-    const l = parseFloat(length);
-    const w = parseFloat(width);
-    const h = parseFloat(height);
-    const waste = parseFloat(wasteFactor) / 100;
-
-    if (!l || !w || !h) {
-      setError('Please fill in all fields');
-      return;
-    }
-
-    if (l <= 0 || l > 1000) {
-      setError('Length must be between 0 and 1000 feet');
-      return;
-    }
-
-    if (w <= 0 || w > 1000) {
-      setError('Width must be between 0 and 1000 feet');
-      return;
-    }
-
-    // Calculate wall area (perimeter × height)
-    const perimeter = 2 * (l + w);
-    const wallArea = perimeter * h;
-    
-    // Calculate ceiling area
-    const ceilingArea = l * w;
-    
-    // Total area
-    const totalArea = wallArea + ceilingArea;
-    
-    // Sheet size in sq ft
-    const sheetSqFt = sheetSize === '4x8' ? 32 : sheetSize === '4x10' ? 40 : 48;
-    
-    // Calculate sheets needed with waste
-    const sheets = Math.ceil((totalArea * (1 + waste)) / sheetSqFt);
-    
-    // Estimate materials
-    const screwsLbs = Math.ceil(sheets * 0.5); // ~0.5 lbs per sheet
-    const tapeRolls = Math.ceil(totalArea / 500); // 500 sq ft per roll
-    const compoundGallons = Math.ceil(totalArea / 100); // 100 sq ft per gallon
-
-    setResults([
-      { label: 'Drywall Sheets', value: sheets, unit: 'sheets', primary: true },
-      { label: 'Total Area', value: totalArea.toFixed(0), unit: 'sq ft' },
-      { label: 'Drywall Screws', value: screwsLbs, unit: 'lbs' },
-      { label: 'Joint Tape', value: tapeRolls, unit: 'rolls' },
-      { label: 'Joint Compound', value: compoundGallons, unit: 'gallons' },
-    ]);
-  };
-
-  const reset = () => {
-    setLength('');
-    setWidth('');
-    setHeight('8');
-    setSheetSize('4x8');
-    setWasteFactor('10');
-    setResults(null);
-    setError('');
-  };
-
-  const relatedCalculators = [
-    {
-      name: 'Insulation Calculator',
-      slug: 'insulation-calculator',
-      description: 'Estimate insulation materials needed',
-    },
-    {
-      name: 'Stucco Calculator',
-      slug: 'stucco-calculator',
-      description: 'Calculate stucco materials for walls',
-    },
-    {
-      name: 'Construction Cost Calculator',
-      slug: 'construction-cost-calculator',
-      description: 'Estimate total construction costs',
-    },
-  ];
-
-  const faqs = [
-    {
-      question: 'How many sheets of drywall do I need?',
-      answer: 'Calculate total wall area (perimeter × height) plus ceiling area (length × width), then divide by sheet size (32 sq ft for 4x8 sheets). Add 10% for waste. Example: 320 sq ft room needs 320 ÷ 32 = 10 sheets + 10% waste = 11 sheets. Use our calculator for instant results.',
-    },
-    {
-      question: 'How many square feet in a sheet of drywall?',
-      answer: 'Standard 4x8 sheet = 32 square feet. 4x10 sheet = 40 square feet. 4x12 sheet = 48 square feet. The 4x8 sheet is most common and easiest to handle. Calculate your room square footage and divide by 32 to estimate sheets needed.',
-    },
-    {
-      question: 'How do I calculate drywall square footage?',
-      answer: 'For walls: Calculate perimeter (2 × length + 2 × width) and multiply by wall height. For ceiling: Multiply room length × width. Add walls + ceiling for total square footage. Then divide by 32 (sq ft per 4x8 sheet) and add 10% waste.',
-    },
-    {
-      question: 'How much drywall do I need for a room?',
-      answer: 'Measure room length, width, and height. Our calculator computes wall area (perimeter × height) + ceiling area (length × width). For a 12x12 room with 8-foot ceilings: walls = 384 sq ft, ceiling = 144 sq ft, total = 528 sq ft ÷ 32 = 17 sheets with waste.',
-    },
-    {
-      question: 'What size drywall sheets should I use?',
-      answer: '4x8 sheets (32 sq ft) are standard and easiest to handle for DIY. 4x12 sheets (48 sq ft) reduce seams but are heavy and need 2+ people. Use 1/2" thickness for walls, 5/8" for ceilings and fire-rated applications.',
-    },
-    {
-      question: 'How do I calculate drywall for walls and ceilings?',
-      answer: 'Walls: Measure perimeter (add all wall lengths) and multiply by ceiling height. Ceiling: Multiply room length by width. Total square footage ÷ 32 (for 4x8 sheets) = number of sheets. Add 10% for waste and cuts.',
-    },
-    {
-      question: 'How much waste should I factor into drywall calculations?',
-      answer: '10% waste is standard for simple rectangular rooms. Add 15-20% for rooms with many corners, angles, windows, or openings. Complex layouts with vaulted ceilings or irregular shapes may need 20-25% waste factor.',
-    },
-    {
-      question: 'How many screws do I need per sheet of drywall?',
-      answer: 'Use screws every 12 inches on walls (32-40 screws per 4x8 sheet), every 8 inches on ceilings (48-60 screws per sheet). One pound of #6 drywall screws contains 150-200 screws. Calculate 0.5 lbs per wall sheet, 0.75 lbs per ceiling sheet.',
-    },
-    {
-      question: 'How to measure drywall or sheetrock needed?',
-      answer: 'Use a tape measure to get room length, width, and wall height. Calculate wall area: (2 × length + 2 × width) × height. Calculate ceiling: length × width. Add both, divide by 32 for 4x8 sheets. Subtract large openings over 10 sq ft, but add 10% waste.',
-    },
-    {
-      question: 'What are the dimensions of a sheet of drywall?',
-      answer: 'Standard sizes: 4x8 feet (most common, 32 sq ft), 4x10 feet (40 sq ft), 4x12 feet (48 sq ft). Standard thicknesses: 1/4" (renovations), 3/8" (overlays), 1/2" (walls), 5/8" (ceilings, fire-rated). Width is always 4 feet, length varies.',
-    },
-  ];
-
   return (
     <CalculatorLayout
       title="Drywall Calculator"
       description="Estimate drywall sheets needed for walls and ceilings"
       relatedCalculators={relatedCalculators}
+      lastUpdated="2026-02-09"
     >
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Enter Room Dimensions</h2>
-          
-          <InputField
-            label="Room Length"
-            name="length"
-            value={length}
-            onChange={setLength}
-            unit="feet"
-            placeholder="e.g., 20"
-          />
-
-          <InputField
-            label="Room Width"
-            name="width"
-            value={width}
-            onChange={setWidth}
-            unit="feet"
-            placeholder="e.g., 15"
-          />
-
-          <SelectField
-            label="Wall Height"
-            name="height"
-            value={height}
-            onChange={setHeight}
-            options={[
-              { value: '8', label: '8 feet' },
-              { value: '9', label: '9 feet' },
-              { value: '10', label: '10 feet' },
-              { value: '12', label: '12 feet' },
-            ]}
-          />
-
-          <SelectField
-            label="Sheet Size"
-            name="sheetSize"
-            value={sheetSize}
-            onChange={setSheetSize}
-            options={[
-              { value: '4x8', label: '4x8 feet (32 sq ft)' },
-              { value: '4x10', label: '4x10 feet (40 sq ft)' },
-              { value: '4x12', label: '4x12 feet (48 sq ft)' },
-            ]}
-          />
-
-          <SelectField
-            label="Waste Factor"
-            name="wasteFactor"
-            value={wasteFactor}
-            onChange={setWasteFactor}
-            options={[
-              { value: '5', label: '5%' },
-              { value: '10', label: '10%' },
-              { value: '15', label: '15%' },
-              { value: '20', label: '20%' },
-            ]}
-          />
-
-          <div className="flex gap-4">
-            <CalculatorButton onClick={calculate}>
-              Calculate
-            </CalculatorButton>
-            <CalculatorButton onClick={reset} variant="secondary">
-              Reset
-            </CalculatorButton>
-          </div>
-        </div>
-
-        <div>
-          {error && <ErrorMessage message={error} />}
-          {results && <ResultDisplay results={results} />}
-          {results && (
-            <button
-              onClick={() => window.print()}
-              className="mt-4 px-6 py-2 border-2 border-gray-300 hover:border-gray-900 transition-colors no-print"
-            >
-              Print Results
-            </button>
-          )}
-        </div>
-      </div>
+      <DrywallForm />
 
       <HowToUse
         steps={[
@@ -254,10 +99,10 @@ export default function DrywallCalculator() {
 
       <div className="mt-12 prose prose-lg max-w-none">
         <h2 className="text-3xl font-bold mb-6">Complete Drywall Installation Guide</h2>
-        
+
         <h3 className="text-2xl font-bold mt-8 mb-4">How Many Sheets of Drywall Do I Need?</h3>
         <p className="mb-4">
-          The most common question homeowners ask is "how many sheets of drywall do I need?" The answer depends on your room dimensions and sheet size. A standard 4x8 sheet covers 32 square feet. Calculate your total wall and ceiling area, divide by 32, and add 10% for waste.
+          The most common question homeowners ask is &quot;how many sheets of drywall do I need?&quot; The answer depends on your room dimensions and sheet size. A standard 4x8 sheet covers 32 square feet. Calculate your total wall and ceiling area, divide by 32, and add 10% for waste.
         </p>
         <p className="mb-4">
           <strong>Quick example:</strong> For a 12×15 room with 8-foot ceilings:
@@ -291,7 +136,7 @@ export default function DrywallCalculator() {
           Beyond sheets, you need screws, joint tape, and compound (mud). Our calculator estimates all materials:
         </p>
         <ul className="list-disc pl-6 mb-4">
-          <li><strong>Drywall Screws:</strong> 0.5 lbs per wall sheet, 0.75 lbs per ceiling sheet (screws every 12" on walls, 8" on ceilings)</li>
+          <li><strong>Drywall Screws:</strong> 0.5 lbs per wall sheet, 0.75 lbs per ceiling sheet (screws every 12&quot; on walls, 8&quot; on ceilings)</li>
           <li><strong>Joint Tape:</strong> 1 roll (250-500 ft) per 500 sq ft of drywall</li>
           <li><strong>Joint Compound:</strong> 1 gallon covers approximately 100 sq ft (need 3 coats)</li>
           <li><strong>Corner Bead:</strong> Measure all outside corners in linear feet</li>

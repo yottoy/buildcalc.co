@@ -1,193 +1,78 @@
-'use client';
-
-import { useState } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
-import { InputField, SelectField, CalculatorButton, ResultDisplay, ErrorMessage } from '@/components/CalculatorForm';
 import FAQSection from '@/components/FAQSection';
 import HowToUse from '@/components/HowToUse';
+import ConstructionCostForm from './ConstructionCostForm';
+
+const relatedCalculators = [
+  {
+    name: 'Concrete Cost Calculator',
+    slug: 'concrete-cost-calculator',
+    description: 'Estimate total concrete costs based on project dimensions',
+  },
+  {
+    name: 'Material Cost Estimator',
+    slug: 'material-cost-estimator',
+    description: 'Estimate total material costs for construction projects',
+  },
+  {
+    name: 'Drywall Calculator',
+    slug: 'drywall-calculator',
+    description: 'Estimate drywall sheets needed for walls and ceilings',
+  },
+];
+
+const faqs = [
+  {
+    question: 'How do I estimate construction costs?',
+    answer: 'To estimate construction costs, calculate total square footage and multiply by cost per square foot based on project type. Basic renovations cost $15-40/sq ft, standard builds $25-75/sq ft, premium $40-120/sq ft. Add labor costs (typically 50-60% of total) and contingency (10-20%). Our calculator automates this process instantly.',
+  },
+  {
+    question: 'What is a construction cost estimator?',
+    answer: 'A construction cost estimator calculates total project costs including materials, labor, equipment, permits, and overhead. It breaks down costs per square foot based on project type (basic, standard, premium, luxury) and local labor rates. Use it for budgeting renovations, new construction, or remodels before getting contractor quotes.',
+  },
+  {
+    question: 'How accurate is this construction cost estimate?',
+    answer: 'This calculator provides estimates accurate within 15-30% for preliminary budgeting. Actual costs vary by location (urban vs rural), materials chosen, labor availability, project complexity, and market conditions. Use estimates as starting points, then get detailed quotes from 3+ licensed contractors for precise pricing.',
+  },
+  {
+    question: 'How much does building cost per square foot?',
+    answer: 'Building costs range $100-$400+ per square foot depending on quality level. Basic construction: $100-150/sq ft. Standard residential: $150-200/sq ft. Premium builds: $200-300/sq ft. Luxury custom homes: $300-500/sq ft. Location significantly impacts costs—urban areas cost 20-50% more than rural.',
+  },
+  {
+    question: 'What does each project type include?',
+    answer: 'Basic ($15-40/sq ft): Essential materials, builder-grade finishes, basic fixtures. Standard ($25-75/sq ft): Mid-grade materials, standard appliances, quality finishes. Premium ($40-120/sq ft): High-quality materials, custom features, designer finishes. Luxury ($60-200/sq ft): Top-tier materials, extensive custom work, high-end everything.',
+  },
+  {
+    question: 'Are permits and fees included in the estimate?',
+    answer: 'No, this estimate covers materials and labor only. Add these costs separately: Permits (1-4% of project cost), inspections ($200-500 each), insurance (1-2%), design/architect fees (5-15%), and contingency for unexpected issues (10-20% recommended).',
+  },
+  {
+    question: 'What is the typical labor cost for construction?',
+    answer: 'Labor typically represents 50-60% of total construction costs. General contractors charge $40-80/hour. Specialized trades: electricians $50-100/hour, plumbers $60-120/hour, HVAC $75-150/hour. Rates vary by location—urban areas 30-50% higher than rural. Our calculator uses customizable rates.',
+  },
+  {
+    question: 'How to calculate building cost for new construction?',
+    answer: 'Calculate building cost: (Square Footage × Cost per Sq Ft) + (Square Footage × Labor Hours per Sq Ft × Labor Rate). Example: 2,000 sq ft standard build at $25/sq ft materials + 0.75 hrs/sq ft labor at $50/hr = $50,000 materials + $75,000 labor = $125,000 total, or $62.50/sq ft.',
+  },
+  {
+    question: 'What affects construction cost estimates?',
+    answer: 'Key factors: Location (urban 30-50% more expensive), project size (larger = lower cost/sq ft), material quality, labor availability, site conditions (difficult access adds 10-25%), timeline (rushed = premium costs), design complexity, permit requirements, and market conditions (supply chain impacts pricing).',
+  },
+  {
+    question: 'How much contingency should I budget for construction?',
+    answer: 'Budget 10-20% contingency for unexpected costs. Use 10% for straightforward projects with fixed scope, 15% for renovations (unknown conditions), 20% for older buildings or complex projects. Contingency covers unforeseen issues: hidden damage, code upgrades, material price increases, design changes.',
+  },
+];
 
 export default function ConstructionCostCalculator() {
-  const [squareFootage, setSquareFootage] = useState<string>('');
-  const [projectType, setProjectType] = useState<string>('basic');
-  const [laborRate, setLaborRate] = useState<string>('50');
-  const [results, setResults] = useState<any>(null);
-  const [error, setError] = useState<string>('');
-
-  const projectTypes: { [key: string]: { name: string; materialCostPerSqFt: number; laborHoursPerSqFt: number } } = {
-    basic: { name: 'Basic Renovation', materialCostPerSqFt: 15, laborHoursPerSqFt: 0.5 },
-    standard: { name: 'Standard Build', materialCostPerSqFt: 25, laborHoursPerSqFt: 0.75 },
-    premium: { name: 'Premium Build', materialCostPerSqFt: 40, laborHoursPerSqFt: 1.0 },
-    luxury: { name: 'Luxury Build', materialCostPerSqFt: 60, laborHoursPerSqFt: 1.5 },
-  };
-
-  const calculate = () => {
-    setError('');
-    
-    const sqft = parseFloat(squareFootage);
-    const rate = parseFloat(laborRate);
-
-    if (!sqft || !rate) {
-      setError('Please fill in all fields');
-      return;
-    }
-
-    if (sqft <= 0 || sqft > 50000) {
-      setError('Square footage must be between 0 and 50,000');
-      return;
-    }
-
-    if (rate <= 0 || rate > 500) {
-      setError('Labor rate must be between $0 and $500 per hour');
-      return;
-    }
-
-    const project = projectTypes[projectType];
-    const materialCost = sqft * project.materialCostPerSqFt;
-    const laborHours = sqft * project.laborHoursPerSqFt;
-    const laborCost = laborHours * rate;
-    const totalCost = materialCost + laborCost;
-    const costPerSqFt = totalCost / sqft;
-
-    setResults([
-      { label: 'Total Estimated Cost', value: `$${totalCost.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, primary: true },
-      { label: 'Material Cost', value: `$${materialCost.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` },
-      { label: 'Labor Cost', value: `$${laborCost.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` },
-      { label: 'Cost per Square Foot', value: `$${costPerSqFt.toFixed(2)}`, unit: '/ft²' },
-      { label: 'Estimated Labor Hours', value: laborHours.toFixed(1), unit: 'hours' },
-    ]);
-  };
-
-  const reset = () => {
-    setSquareFootage('');
-    setProjectType('basic');
-    setLaborRate('50');
-    setResults(null);
-    setError('');
-  };
-
-  const relatedCalculators = [
-    {
-      name: 'Concrete Cost Calculator',
-      slug: 'concrete-cost-calculator',
-      description: 'Estimate total concrete costs based on project dimensions',
-    },
-    {
-      name: 'Material Cost Estimator',
-      slug: 'material-cost-estimator',
-      description: 'Estimate total material costs for construction projects',
-    },
-    {
-      name: 'Drywall Calculator',
-      slug: 'drywall-calculator',
-      description: 'Estimate drywall sheets needed for walls and ceilings',
-    },
-  ];
-
-  const faqs = [
-    {
-      question: 'How do I estimate construction costs?',
-      answer: 'To estimate construction costs, calculate total square footage and multiply by cost per square foot based on project type. Basic renovations cost $15-40/sq ft, standard builds $25-75/sq ft, premium $40-120/sq ft. Add labor costs (typically 50-60% of total) and contingency (10-20%). Our calculator automates this process instantly.',
-    },
-    {
-      question: 'What is a construction cost estimator?',
-      answer: 'A construction cost estimator calculates total project costs including materials, labor, equipment, permits, and overhead. It breaks down costs per square foot based on project type (basic, standard, premium, luxury) and local labor rates. Use it for budgeting renovations, new construction, or remodels before getting contractor quotes.',
-    },
-    {
-      question: 'How accurate is this construction cost estimate?',
-      answer: 'This calculator provides estimates accurate within 15-30% for preliminary budgeting. Actual costs vary by location (urban vs rural), materials chosen, labor availability, project complexity, and market conditions. Use estimates as starting points, then get detailed quotes from 3+ licensed contractors for precise pricing.',
-    },
-    {
-      question: 'How much does building cost per square foot?',
-      answer: 'Building costs range $100-$400+ per square foot depending on quality level. Basic construction: $100-150/sq ft. Standard residential: $150-200/sq ft. Premium builds: $200-300/sq ft. Luxury custom homes: $300-500/sq ft. Location significantly impacts costs—urban areas cost 20-50% more than rural.',
-    },
-    {
-      question: 'What does each project type include?',
-      answer: 'Basic ($15-40/sq ft): Essential materials, builder-grade finishes, basic fixtures. Standard ($25-75/sq ft): Mid-grade materials, standard appliances, quality finishes. Premium ($40-120/sq ft): High-quality materials, custom features, designer finishes. Luxury ($60-200/sq ft): Top-tier materials, extensive custom work, high-end everything.',
-    },
-    {
-      question: 'Are permits and fees included in the estimate?',
-      answer: 'No, this estimate covers materials and labor only. Add these costs separately: Permits (1-4% of project cost), inspections ($200-500 each), insurance (1-2%), design/architect fees (5-15%), and contingency for unexpected issues (10-20% recommended).',
-    },
-    {
-      question: 'What is the typical labor cost for construction?',
-      answer: 'Labor typically represents 50-60% of total construction costs. General contractors charge $40-80/hour. Specialized trades: electricians $50-100/hour, plumbers $60-120/hour, HVAC $75-150/hour. Rates vary by location—urban areas 30-50% higher than rural. Our calculator uses customizable rates.',
-    },
-    {
-      question: 'How to calculate building cost for new construction?',
-      answer: 'Calculate building cost: (Square Footage × Cost per Sq Ft) + (Square Footage × Labor Hours per Sq Ft × Labor Rate). Example: 2,000 sq ft standard build at $25/sq ft materials + 0.75 hrs/sq ft labor at $50/hr = $50,000 materials + $75,000 labor = $125,000 total, or $62.50/sq ft.',
-    },
-    {
-      question: 'What affects construction cost estimates?',
-      answer: 'Key factors: Location (urban 30-50% more expensive), project size (larger = lower cost/sq ft), material quality, labor availability, site conditions (difficult access adds 10-25%), timeline (rushed = premium costs), design complexity, permit requirements, and market conditions (supply chain impacts pricing).',
-    },
-    {
-      question: 'How much contingency should I budget for construction?',
-      answer: 'Budget 10-20% contingency for unexpected costs. Use 10% for straightforward projects with fixed scope, 15% for renovations (unknown conditions), 20% for older buildings or complex projects. Contingency covers unforeseen issues: hidden damage, code upgrades, material price increases, design changes.',
-    },
-  ];
-
   return (
     <CalculatorLayout
       title="Construction Cost Calculator"
       description="Estimate total construction project material costs"
       relatedCalculators={relatedCalculators}
+      lastUpdated="2026-02-09"
     >
-      <div className="grid md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Enter Project Details</h2>
-          
-          <InputField
-            label="Square Footage"
-            name="squareFootage"
-            value={squareFootage}
-            onChange={setSquareFootage}
-            unit="ft²"
-            placeholder="e.g., 1500"
-          />
-
-          <SelectField
-            label="Project Type"
-            name="projectType"
-            value={projectType}
-            onChange={setProjectType}
-            options={Object.entries(projectTypes).map(([key, value]) => ({
-              value: key,
-              label: value.name,
-            }))}
-          />
-
-          <InputField
-            label="Labor Rate"
-            name="laborRate"
-            value={laborRate}
-            onChange={setLaborRate}
-            unit="$/hour"
-            placeholder="e.g., 50"
-          />
-
-          <div className="flex gap-4">
-            <CalculatorButton onClick={calculate}>
-              Calculate
-            </CalculatorButton>
-            <CalculatorButton onClick={reset} variant="secondary">
-              Reset
-            </CalculatorButton>
-          </div>
-        </div>
-
-        <div>
-          {error && <ErrorMessage message={error} />}
-          {results && <ResultDisplay results={results} />}
-          {results && (
-            <button
-              onClick={() => window.print()}
-              className="mt-4 px-6 py-2 border-2 border-gray-300 hover:border-gray-900 transition-colors no-print"
-            >
-              Print Results
-            </button>
-          )}
-        </div>
-      </div>
+      <ConstructionCostForm />
 
       <HowToUse
         steps={[
@@ -216,7 +101,7 @@ export default function ConstructionCostCalculator() {
 
       <div className="mt-12 prose prose-lg max-w-none">
         <h2 className="text-3xl font-bold mb-6">Complete Construction Cost Estimator Guide</h2>
-        
+
         <h3 className="text-2xl font-bold mt-8 mb-4">Understanding Construction Costs</h3>
         <p className="mb-4">
           Construction costs vary widely based on project type, location, materials, and labor. Our construction cost estimator helps you budget accurately by breaking down costs into materials and labor. The average construction project costs $100-$200 per square foot, but can range from $50 for basic renovations to $500+ for luxury custom builds.
@@ -246,7 +131,7 @@ export default function ConstructionCostCalculator() {
           <li className="mb-2"><strong>Research Local Labor Rates:</strong> Contact contractors or check local rate surveys ($40-80/hour typical).</li>
           <li className="mb-2"><strong>Calculate Material Costs:</strong> Square footage × material cost per sq ft for your project type.</li>
           <li className="mb-2"><strong>Calculate Labor Costs:</strong> Square footage × labor hours per sq ft × hourly rate.</li>
-          <li className="mb-2"><strong>Add Permits & Fees:</strong> Typically 1-4% of project cost, varies by location.</li>
+          <li className="mb-2"><strong>Add Permits &amp; Fees:</strong> Typically 1-4% of project cost, varies by location.</li>
           <li className="mb-2"><strong>Include Contingency:</strong> Add 10-20% for unexpected costs and changes.</li>
         </ol>
 

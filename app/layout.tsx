@@ -100,39 +100,64 @@ export default function RootLayout({
           </main>
           
           <footer className="border-t border-gray-200 mt-16 no-print">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                  <h3 className="font-bold mb-4">Build Calculators</h3>
-                  <p className="text-sm text-gray-600">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
+                <div className="col-span-2 md:col-span-3 lg:col-span-1">
+                  <h3 className="font-bold mb-3">Build Calculators</h3>
+                  <p className="text-sm text-gray-600 mb-4">
                     Free construction and landscaping calculators for contractors, builders, and DIY homeowners.
                   </p>
-                </div>
-                
-                <div>
-                  <h3 className="font-bold mb-4">Quick Links</h3>
-                  <ul className="space-y-2 text-sm">
+                  <ul className="space-y-1 text-sm">
                     <li><Link href="/" className="text-gray-600 hover:text-foreground">Home</Link></li>
                     <li><Link href="/about" className="text-gray-600 hover:text-foreground">About</Link></li>
                     <li><Link href="/contact" className="text-gray-600 hover:text-foreground">Contact</Link></li>
                   </ul>
                 </div>
-                
-                <div itemScope itemType="https://schema.org/Person">
-                  <h3 className="font-bold mb-4">Created By</h3>
-                  <p className="text-sm">
-                    <span itemProp="name" className="font-medium">Build Calculators Team</span><br />
-                    <span itemProp="jobTitle" className="text-gray-600">Construction Calculator Specialists</span>
-                  </p>
-                  <p className="text-xs text-gray-500 mt-4">
-                    Last updated: February 2026
-                  </p>
+                <div>
+                  <h3 className="font-bold mb-3 text-sm uppercase tracking-wider text-gray-400">Concrete &amp; Masonry</h3>
+                  <ul className="space-y-1 text-sm">
+                    <li><Link href="/concrete-cost-calculator" className="text-gray-600 hover:text-foreground">Concrete Cost</Link></li>
+                    <li><Link href="/concrete-driveway-calculator" className="text-gray-600 hover:text-foreground">Concrete Driveway</Link></li>
+                    <li><Link href="/concrete-steps-calculator" className="text-gray-600 hover:text-foreground">Concrete Steps</Link></li>
+                    <li><Link href="/brick-calculator" className="text-gray-600 hover:text-foreground">Brick</Link></li>
+                    <li><Link href="/stucco-calculator" className="text-gray-600 hover:text-foreground">Stucco</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold mb-3 text-sm uppercase tracking-wider text-gray-400">Landscaping</h3>
+                  <ul className="space-y-1 text-sm">
+                    <li><Link href="/gravel-cost-calculator" className="text-gray-600 hover:text-foreground">Gravel Cost</Link></li>
+                    <li><Link href="/pea-gravel-calculator" className="text-gray-600 hover:text-foreground">Pea Gravel</Link></li>
+                    <li><Link href="/crushed-stone-calculator" className="text-gray-600 hover:text-foreground">Crushed Stone</Link></li>
+                    <li><Link href="/sand-calculator" className="text-gray-600 hover:text-foreground">Sand</Link></li>
+                    <li><Link href="/dirt-calculator" className="text-gray-600 hover:text-foreground">Dirt</Link></li>
+                    <li><Link href="/bulk-material-calculator" className="text-gray-600 hover:text-foreground">Bulk Material</Link></li>
+                    <li><Link href="/sod-calculator" className="text-gray-600 hover:text-foreground">Sod</Link></li>
+                    <li><Link href="/landscaping-calculator" className="text-gray-600 hover:text-foreground">Landscaping</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold mb-3 text-sm uppercase tracking-wider text-gray-400">Building</h3>
+                  <ul className="space-y-1 text-sm">
+                    <li><Link href="/drywall-calculator" className="text-gray-600 hover:text-foreground">Drywall</Link></li>
+                    <li><Link href="/insulation-calculator" className="text-gray-600 hover:text-foreground">Insulation</Link></li>
+                    <li><Link href="/construction-cost-calculator" className="text-gray-600 hover:text-foreground">Construction Cost</Link></li>
+                    <li><Link href="/material-cost-estimator" className="text-gray-600 hover:text-foreground">Material Cost</Link></li>
+                  </ul>
+                  <h3 className="font-bold mb-3 mt-6 text-sm uppercase tracking-wider text-gray-400">Fencing &amp; Paving</h3>
+                  <ul className="space-y-1 text-sm">
+                    <li><Link href="/chain-link-fence-calculator" className="text-gray-600 hover:text-foreground">Chain Link Fence</Link></li>
+                    <li><Link href="/wood-fence-calculator" className="text-gray-600 hover:text-foreground">Wood Fence</Link></li>
+                    <li><Link href="/fence-post-calculator" className="text-gray-600 hover:text-foreground">Fence Post</Link></li>
+                    <li><Link href="/asphalt-calculator" className="text-gray-600 hover:text-foreground">Asphalt</Link></li>
+                    <li><Link href="/paver-calculator" className="text-gray-600 hover:text-foreground">Paver</Link></li>
+                    <li><Link href="/french-drain-calculator" className="text-gray-600 hover:text-foreground">French Drain</Link></li>
+                  </ul>
                 </div>
               </div>
-              
-              <div className="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-600">
+              <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
                 <p>&copy; 2026 Build Calculators. All rights reserved.</p>
-                <div className="mt-2 space-x-4">
+                <div className="mt-2 md:mt-0 space-x-4">
                   <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
                   <Link href="/terms" className="hover:text-foreground">Terms of Service</Link>
                 </div>
