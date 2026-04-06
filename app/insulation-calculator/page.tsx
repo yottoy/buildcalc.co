@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import CalculatorLayout from '@/components/CalculatorLayout';
 import FAQSection from '@/components/FAQSection';
 import HowToUse from '@/components/HowToUse';
