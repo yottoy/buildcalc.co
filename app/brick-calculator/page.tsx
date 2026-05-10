@@ -70,7 +70,7 @@ export default function BrickCalculator() {
       title="Brick Calculator"
       description="Estimate number of bricks required for walls and construction projects"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <BrickForm />
 

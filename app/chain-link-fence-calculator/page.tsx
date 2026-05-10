@@ -59,7 +59,7 @@ export default function ChainLinkFenceCalculator() {
       title="Chain Link Fence Calculator"
       description="Estimate chain link fencing materials and posts needed"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <ChainLinkFenceForm />
 

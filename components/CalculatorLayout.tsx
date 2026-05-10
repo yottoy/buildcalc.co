@@ -22,7 +22,7 @@ export default function CalculatorLayout({
   title,
   description,
   children,
-  lastUpdated = '2026-03-01',
+  lastUpdated = '2026-05-10',
   relatedCalculators = [],
 }: CalculatorLayoutProps) {
   // Generate breadcrumb schema
@@ -109,6 +109,16 @@ export default function CalculatorLayout({
             </div>
           </div>
         )}
+
+        {/* Browse All Calculators */}
+        <div className="mt-8 no-print">
+          <Link
+            href="/"
+            className="inline-block text-sm font-medium text-gray-700 hover:text-gray-900 underline hover:no-underline"
+          >
+            ← Browse All 23 Construction Calculators
+          </Link>
+        </div>
 
         {/* Author Attribution with structured data */}
         <div className="border-t border-gray-200 mt-12 pt-8 text-sm text-gray-600 no-print">

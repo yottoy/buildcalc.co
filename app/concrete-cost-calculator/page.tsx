@@ -48,7 +48,7 @@ export default function ConcreteCostCalculator() {
       title="Concrete Cost Calculator"
       description="Estimate total concrete costs based on project dimensions"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <ConcreteCostForm />
 

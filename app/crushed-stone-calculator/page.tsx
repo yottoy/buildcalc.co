@@ -70,7 +70,7 @@ export default function CrushedStoneCalculator() {
       title="Crushed Stone Calculator"
       description="Calculate crushed stone needed for driveways and base layers"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <CrushedStoneForm />
 

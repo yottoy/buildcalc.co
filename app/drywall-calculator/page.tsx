@@ -72,7 +72,7 @@ export default function DrywallCalculator() {
       title="Drywall Calculator"
       description="Estimate drywall sheets needed for walls and ceilings"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <DrywallForm />
 

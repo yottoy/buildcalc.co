@@ -66,7 +66,7 @@ export default function RootLayout({
               description: "Free construction and landscaping calculators for contractors and DIYers",
               url: "https://www.buildcalc.co",
               datePublished: "2025-01-18",
-              dateModified: "2026-02-09",
+              dateModified: "2026-05-10",
             }),
           }}
         />

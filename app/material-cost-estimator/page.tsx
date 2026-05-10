@@ -59,7 +59,7 @@ export default function MaterialCostEstimator() {
       title="Material Cost Estimator"
       description="Estimate total material costs for construction projects"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <MaterialCostEstimatorForm />
 

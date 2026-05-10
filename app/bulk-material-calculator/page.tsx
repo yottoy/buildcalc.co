@@ -70,7 +70,7 @@ export default function BulkMaterialCalculator() {
       title="Bulk Material Calculator"
       description="Calculate cubic yards for bulk construction and landscaping materials"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <BulkMaterialForm />
 

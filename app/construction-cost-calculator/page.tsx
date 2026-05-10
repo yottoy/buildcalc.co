@@ -72,7 +72,7 @@ export default function ConstructionCostCalculator() {
       title="Construction Cost Calculator"
       description="Estimate total construction project material costs"
       relatedCalculators={relatedCalculators}
-      lastUpdated="2026-02-09"
+      lastUpdated="2026-05-10"
     >
       <ConstructionCostForm />
 
