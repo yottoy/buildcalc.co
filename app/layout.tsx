@@ -42,6 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Analytics */}
+        <script src="https://cdn.apitiny.net/scripts/v2.0/main.js" data-site-id="6a015ac47132d2c9b7f21646" data-test-mode="false" async></script>
+
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMPJCD86W2"></script>
         <script
