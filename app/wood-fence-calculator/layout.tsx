@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Wood Fence Calculator - Free Materials Estimator | BuildCalc 2026',
-  description: 'Calculate wood fencing materials and posts needed. Free calculator for picket, privacy, and rail fences. Includes concrete estimates. Updated February 2026.',
+  title: 'Free Wood Fence Calculator — Boards, Posts & Concrete Bags',
+  description: 'Enter fence length and style, get boards, posts, rails, and concrete bag counts instantly. Free wood fence calculator for picket, privacy, and rail fences.',
   keywords: ['wood fence calculator', 'fence calculator', 'picket fence calculator', 'privacy fence calculator', 'fence post calculator', 'fence board calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free Wood Fence Calculator - Materials Estimator | BuildCalc',
-    description: 'Estimate wood fencing materials and posts required for your project',
+    title: 'Free Wood Fence Calculator — Boards, Posts & Concrete Bags',
+    description: 'Enter fence length and style, get boards, posts, rails, and concrete bag counts instantly.',
     url: 'https://www.buildcalc.co/wood-fence-calculator',
     siteName: 'BuildCalc',
     type: 'website',
