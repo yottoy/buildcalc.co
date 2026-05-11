@@ -8,6 +8,11 @@ import Link from 'next/link';
 
 const relatedCalculators = [
   {
+    name: 'All Concrete Calculators',
+    slug: 'concrete-calculators',
+    description: 'Browse all free concrete and masonry calculators in one place',
+  },
+  {
     name: 'Stucco Calculator',
     slug: 'stucco-calculator',
     description: 'Calculate stucco materials for walls',

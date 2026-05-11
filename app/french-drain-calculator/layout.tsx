@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'French Drain Calculator - Drainage Material Estimator | BuildCalc 2026',
-  description: 'Calculate materials needed for French drain installation. Free calculator for gravel, pipe, and fabric. Perfect for drainage systems. Updated February 2026.',
+  title: 'Free French Drain Calculator — Gravel, Pipe & Fabric Estimate',
+  description: 'Enter trench length and depth, get exact gravel, pipe, and landscape fabric quantities. Free French drain calculator for DIY and contractor drainage projects.',
   keywords: ['french drain calculator', 'drainage calculator', 'drain pipe calculator', 'perforated pipe calculator', 'drainage system calculator', 'yard drainage calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free French Drain Calculator - Drainage Estimator | BuildCalc',
-    description: 'Estimate materials needed for French drain and drainage systems',
+    title: 'Free French Drain Calculator — Gravel, Pipe & Fabric Estimate',
+    description: 'Enter trench dimensions, get exact gravel, pipe, and landscape fabric quantities instantly.',
     url: 'https://www.buildcalc.co/french-drain-calculator',
     siteName: 'BuildCalc',
     type: 'website',

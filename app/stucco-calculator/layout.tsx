@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Stucco Calculator - Exterior Finish Estimator | BuildCalc 2026',
-  description: 'Calculate stucco materials needed for exterior walls. Free calculator for 2-coat and 3-coat systems. Includes lath and bead estimates. Updated February 2026.',
+  title: 'Free Stucco Calculator — 2-Coat & 3-Coat System Coverage',
+  description: 'Enter wall area, get exact stucco bags for 2-coat or 3-coat systems instantly. Free calculator includes lath and bead estimates. Updated 2026.',
   keywords: ['stucco calculator', 'stucco estimator', 'exterior stucco calculator', 'stucco material calculator', 'stucco coverage calculator', 'wall stucco calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free Stucco Calculator - Exterior Finish Estimator | BuildCalc',
-    description: 'Calculate stucco materials needed for exterior finishes',
+    title: 'Free Stucco Calculator — 2-Coat & 3-Coat System Coverage',
+    description: 'Enter wall area, get exact stucco bags for 2-coat or 3-coat systems. Lath and bead estimates included.',
     url: 'https://www.buildcalc.co/stucco-calculator',
     siteName: 'BuildCalc',
     type: 'website',

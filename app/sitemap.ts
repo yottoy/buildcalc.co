@@ -7,27 +7,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const calculators: { slug: string; lastModified: string }[] = [
     { slug: 'asphalt-calculator',          lastModified: '2026-05-10' },
     { slug: 'brick-calculator',            lastModified: '2026-05-10' },
-    { slug: 'bulk-material-calculator',    lastModified: '2026-05-10' },
+    { slug: 'bulk-material-calculator',    lastModified: '2026-05-11' },
     { slug: 'chain-link-fence-calculator', lastModified: '2026-05-10' },
     { slug: 'concrete-cost-calculator',    lastModified: '2026-05-10' },
     { slug: 'concrete-driveway-calculator',lastModified: '2026-05-10' },
-    { slug: 'concrete-steps-calculator',   lastModified: '2026-05-10' },
-    { slug: 'construction-cost-calculator',lastModified: '2026-05-10' },
+    { slug: 'concrete-steps-calculator',   lastModified: '2026-05-11' },
+    { slug: 'construction-cost-calculator',lastModified: '2026-05-11' },
     { slug: 'crushed-stone-calculator',    lastModified: '2026-05-10' },
     { slug: 'dirt-calculator',             lastModified: '2026-05-10' },
     { slug: 'drywall-calculator',          lastModified: '2026-05-10' },
     { slug: 'fence-post-calculator',       lastModified: '2026-05-10' },
-    { slug: 'french-drain-calculator',     lastModified: '2026-05-10' },
+    { slug: 'french-drain-calculator',     lastModified: '2026-05-11' },
     { slug: 'gravel-cost-calculator',      lastModified: '2026-05-10' },
     { slug: 'insulation-calculator',       lastModified: '2026-05-10' },
     { slug: 'landscaping-calculator',      lastModified: '2026-05-10' },
-    { slug: 'material-cost-estimator',     lastModified: '2026-05-10' },
+    { slug: 'material-cost-estimator',     lastModified: '2026-05-11' },
     { slug: 'paver-calculator',            lastModified: '2026-05-10' },
     { slug: 'pea-gravel-calculator',       lastModified: '2026-05-10' },
     { slug: 'sand-calculator',             lastModified: '2026-05-10' },
     { slug: 'sod-calculator',              lastModified: '2026-05-10' },
-    { slug: 'stucco-calculator',           lastModified: '2026-05-10' },
-    { slug: 'wood-fence-calculator',       lastModified: '2026-05-10' },
+    { slug: 'stucco-calculator',           lastModified: '2026-05-11' },
+    { slug: 'wood-fence-calculator',       lastModified: '2026-05-11' },
   ];
 
   const calculatorUrls = calculators.map(({ slug, lastModified }) => ({
@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const staticPages = [
+    { slug: 'concrete-calculators', priority: 0.7, lastModified: '2026-05-11' },
     { slug: 'about',   priority: 0.5, lastModified: '2026-05-10' },
     { slug: 'contact', priority: 0.5, lastModified: '2026-05-10' },
     { slug: 'terms',   priority: 0.3, lastModified: '2026-05-10' },

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Material Calculator - Free Materials Cost Estimator 2026',
-  description: 'Free material calculator estimates construction and building materials costs instantly. Calculate materials needed with waste factors for any project. Simple materials calculator for contractors and DIYers.',
+  title: 'Free Material Cost Estimator — Any Material + Waste Factor',
+  description: 'Enter quantity, unit price, and waste percentage for any building material — get instant total cost. Free material cost estimator for contractors and DIYers.',
   keywords: ['material calculator', 'materials calculator', 'material cost estimator', 'calculator for building materials', 'construction material calculator', 'building material estimator', 'material cost calculator', 'materials calculator gravel', 'construction materials estimator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Material Calculator - Free Materials Cost Estimator',
-    description: 'Free materials calculator estimates costs for construction projects. Calculate building materials needed with waste factors. Simple material cost estimator.',
+    title: 'Free Material Cost Estimator — Any Material + Waste Factor',
+    description: 'Enter quantity, unit price, and waste percentage for any building material — get instant total cost.',
     url: 'https://www.buildcalc.co/material-cost-estimator',
     siteName: 'BuildCalc',
     type: 'website',
@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "price": "0",
               "priceCurrency": "USD"
             },
-            "description": "Estimate total material costs for construction projects with waste factor calculations.",
+            "description": "Enter quantity, unit price, and waste percentage for any building material and get instant total cost including waste.",
             "url": "https://www.buildcalc.co/material-cost-estimator",
             "author": {
               "@type": "Person",

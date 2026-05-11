@@ -6,6 +6,7 @@ const categories = [
   {
     name: "Concrete & Masonry",
     description: "Calculate concrete volumes, costs, and masonry materials for foundations, driveways, steps, and walls.",
+    hubSlug: "concrete-calculators",
     calculators: [
       { name: "Concrete Cost Calculator", slug: "concrete-cost-calculator", description: "Estimate total concrete costs based on project dimensions" },
       { name: "Concrete Driveway Calculator", slug: "concrete-driveway-calculator", description: "Calculate concrete needed for driveway projects" },
@@ -96,9 +97,19 @@ export default function Home() {
 
       {categories.map((category) => (
         <div key={category.name} className="mb-16">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold mb-3">{category.name}</h2>
-            <p className="text-gray-600">{category.description}</p>
+          <div className="mb-6 flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-bold mb-3">{category.name}</h2>
+              <p className="text-gray-600">{category.description}</p>
+            </div>
+            {category.hubSlug && (
+              <Link
+                href={`/${category.hubSlug}`}
+                className="shrink-0 text-sm font-medium text-blue-600 hover:text-blue-800 whitespace-nowrap"
+              >
+                See all →
+              </Link>
+            )}
           </div>
           <div className="space-y-3">
             {category.calculators.map((calculator) => (

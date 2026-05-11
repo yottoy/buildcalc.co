@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Concrete Steps Calculator - Free Stair Estimator | BuildCalc 2026',
-  description: 'Calculate concrete needed for steps and stairs. Free calculator shows cubic yards and 80lb bags required. Perfect for outdoor steps. Updated February 2026.',
+  title: 'Free Concrete Steps Calculator — Cubic Yards & Bags Instantly',
+  description: 'Enter step dimensions, get instant cubic yards and 80-lb bag counts. Free concrete steps calculator used by contractors and DIYers. No signup needed.',
   keywords: ['concrete steps calculator', 'stair calculator', 'concrete stairs calculator', 'steps estimator', 'outdoor steps calculator', 'concrete staircase calculator'],
   authors: [{ name: 'Marcus Rivera', url: 'https://www.buildcalc.co' }],
   openGraph: {
-    title: 'Free Concrete Steps Calculator - Stair Estimator | BuildCalc',
-    description: 'Calculate concrete needed for your steps and stairs project',
+    title: 'Free Concrete Steps Calculator — Cubic Yards & Bags Instantly',
+    description: 'Enter step dimensions, get instant cubic yards and 80-lb bag counts. No signup needed.',
     url: 'https://www.buildcalc.co/concrete-steps-calculator',
     siteName: 'BuildCalc',
     type: 'website',
